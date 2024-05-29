@@ -1,0 +1,495 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+@font-face {
+    font-family: "latest-bold";
+    src: url(fonts/latest-med.woff2);
+}
+
+@font-face {
+    font-family: "latest-medium";
+    src: url(fonts/latest.woff2);
+}
+
+@font-face {
+    font-family: "m-fluent";
+    src: url(fonts/MWFFluentIcons.woff2);
+}
+
+body{
+    letter-spacing: -0.03em;
+}
+
+
+
+/* display-none */
+
+.azure-desktop-nav{
+    display: none;
+}
+
+
+
+/*---------------------- main-styles---------------------------- */
+
+.azure-header-container{
+    position: relative;
+    background-color: #fff;
+}
+
+header{
+    box-sizing: border-box;
+    color: #1a1a1f;
+    font-size: 15px;
+}
+
+.mobile-nav-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px;
+
+}
+
+.azure-home-container{
+    min-width: 130px;
+    transform: translateY(1px);
+}
+
+.azure-home-container button{
+    background-color: transparent;
+    border: 0;
+    text-align: left;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px !important;
+    height: 44px;
+    line-height: 1;
+}
+
+.menu{
+    pointer-events: none;
+    text-align: left;
+}
+
+.menu svg{
+    width: 20px;
+    overflow: visible;
+    fill: currentColor;
+    height: auto;
+    max-width: 100%;
+    vertical-align: unset;
+}
+
+.azure-home-container a{
+    background-color: transparent;
+    text-decoration: none;
+    color: currentColor;
+    font-size: 17px;
+    line-height: 44px;
+    font-weight: 600;
+    font-family: latest-bold;
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+}
+
+.windows-logo-container{
+    background-color: transparent;
+    text-decoration: none;
+
+}
+
+.window-logo-container span{
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    line-height: 0;
+    vertical-align: middle;
+}
+
+.window-logo-container span svg{
+    height: 100%;
+    width: 100%;
+    fill: currentColor;
+    max-width: 100%;
+    overflow: visible;
+    vertical-align: unset;
+}
+
+.search-signin-actions{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    min-width: 130px;
+
+}
+
+.search-btn{
+    background-color: transparent;
+    border: 0;
+    text-align: left;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px !important;
+    height: 44px;
+    line-height: 1;
+}
+
+.search-btn::after{
+    content: "";
+    font-family: m-fluent;
+    font-size: 18px;
+    transform: translateY(2px);
+
+}
+
+.sign-in-container{
+    font-size: 14px;
+    align-items: center;
+    display: flex;
+    line-height: 1;
+    margin: 0;
+
+}
+
+.sign-in-container a{
+    background-color: transparent;
+    text-decoration: none;
+    color: currentColor;
+    padding: 20px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1;
+    font-family: latest-bold;
+}
+
+
+
+
+
+
+/* -----------------------------Media Query---------------------------------- */
+
+
+@media screen and (min-width: 48em){
+
+    header{
+        max-width: 1600px;
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .mobile-nav-container{
+        display: none;
+    }
+
+
+    .azure-desktop-nav{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        position: relative;
+        border-bottom: 1px solid transparent;
+        overflow-x: unset;
+        /* height: 55px; */
+
+    }
+
+    .left-nav{
+        background-color: inherit;
+        border: none;
+        padding: 0 12px;
+        width: auto;
+        margin-right: auto;
+        display: flex;
+        align-items: center;
+
+    }
+
+    .azure-windows{
+        display: flex;
+        align-items: center;
+
+    }
+
+    .azure-windows a{
+        background-color: transparent;
+        color: currentColor;
+        text-decoration: none;
+
+    }
+
+    .azure-windows a span{
+        height: 24px;
+        width: 24px;
+        display: inline-block;
+        vertical-align: middle;
+
+    }
+
+    .azure-windows a span svg{
+        height: 100%;
+        width: 100%;
+        fill: currentColor;
+        max-width: 100%;
+        overflow: visible;
+        vertical-align: unset;
+        transform: translateY(1px);
+
+    }
+
+    .azure-heading{
+        background-color: transparent;
+        color: currentColor;
+        text-decoration: none;
+        margin-left: 12px;
+        font-size: 18px;
+        font-weight: 600;
+        font-family: latest-bold;
+
+    }
+
+    .left-nav ul{
+        list-style: none;
+        margin: 0;
+        background-color: inherit;
+        display: inline-flex;
+        margin-left: 12px;
+        padding: 0;
+
+    }
+
+    .left-nav ul li{
+        font-size: 14px;
+        align-items: center;
+        display: flex;
+        line-height: 1;
+        margin: 0;
+
+    }
+
+    .nav-list{
+        width: initial;
+        background-color: transparent;
+        border: 0;
+        text-align: left;
+        font-family: latest-medium;
+        font-size: 13px;
+        padding: 20px 8px;
+        align-items: center;
+        justify-content: space-between;
+        display: flex;
+        font-weight: 400;
+
+    }
+
+    .nav-list::after{
+        content: "\e70d";
+        font-family: m-fluent;
+        margin: 2px 0px 0px 4px;
+        font-size: 8px;
+        padding-top: 4px;
+        float: right;
+    }
+
+    .nav-search-form{
+        display: none;
+    }
+
+    .right-nav{
+        position: relative;
+        display: flex;
+        align-items: center;
+
+    }
+    .option-btn-nav{
+        background-color: transparent;
+        border: 0;
+        text-align: left;
+    }
+
+    .option-btn-nav span{
+        height: 24px;
+        width: 24px;
+        display: inline-block;
+        line-height: 0;
+        vertical-align: middle;
+    }
+
+    .option-btn-nav span a{
+        height: 100%;
+        width: 100%;
+        max-width: 100%;
+        overflow: visible;
+        vertical-align: unset;
+    }
+
+    .utility-nav{
+        display: none;
+    }
+
+    .right-signin{
+        border: 0;
+        font-weight: 400;
+        align-items: center;
+        display: flex;
+        line-height: 1;
+        margin: 0;
+    }
+
+    .right-signin a{
+        text-decoration: none;
+        color: currentColor;
+        background-color: transparent;
+        font-size: 13px;
+        padding: 20px 8px;
+        text-align: right;
+        white-space: nowrap;
+        width: 100%;
+
+    }
+}
+
+
+
+
+
+/* -------------------minwidth67.5em------------------- */
+
+
+@media screen and (min-width:67.5em){
+    .right-search{
+        display: none;
+    }
+
+    .option-btn-nav{
+        display: none;
+    }
+
+    .right-signin{
+        display: none;
+    }
+
+    .azure-heading{
+        margin-left: 24px;
+    }
+
+    .left-nav ul{
+        margin-left: 24px !important;
+    }
+
+    .nav-search-form{
+        display: flex;
+        align-items: center;
+        position: relative;
+        margin-right: 12px;
+        width: 120px;
+        z-index: 1;
+    }
+
+    .search-form-container{
+        width: 120px;
+        position: relative;
+        justify-content: flex-start;
+        display: flex;
+        align-items: center;
+
+    }
+
+    .search-form-container input{
+        color: #4c4c51;
+        font-size: 13px;
+        padding-left: 12px;
+        padding-right: 24px;
+        min-height: 32px;
+        border: 1px solid #747479;
+        display: block;
+        line-height: 1.2;
+        width: 100%;
+        font-family: latest-medium;
+    }
+
+    .search-btn{
+        right: 8px;
+        top: 1px;
+        position: absolute;
+        width: 24px !important;
+        height: 24px;
+    }
+
+    .search-btn::after{
+        font-size: 14px;
+    }
+
+    .utility-nav{
+        position: relative;
+        display: flex;
+        align-items: center;
+
+    }
+
+    .utility-nav ul{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+
+    }
+
+    .utility-nav ul li{
+        border: 0;
+        font-weight: 400;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        line-height: 1;
+        margin: 0;
+    }
+
+    .utility-nav ul li a{
+        text-decoration: none;
+        color: currentColor;
+        font-size: 13px;
+        text-align: center;
+        padding: 20px 8px;
+        font-weight: 400;
+        font-family: latest-medium;
+    }
+
+    .free-green{
+        background-color: #89c402;
+        border: 1px solid #6f9e02;
+        border-radius: 4px;
+        color: #1a1a1f;
+        display: inline-block;
+        font-size: 12px;
+        padding: 9px;
+        line-height: 1;
+        text-align: center;
+        text-decoration: none;
+        margin: 0 6px;
+    }
+
+    .azure-desktop-nav{
+        height: 54px;
+    }
+}
+
+
+
+
+
+/* ------------------minwidth 1280px---------------------------- */
+
+
+.nav-search-form{
+    margin-right: 24px;
+}
