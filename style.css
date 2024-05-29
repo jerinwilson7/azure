@@ -334,6 +334,110 @@ video{
     max-width: 100%;
 }
 
+
+
+/* ----------------------sticky------------------------------- */
+
+
+.main-sticky-container{
+    height: 56px;
+    margin-top: 0px;
+    z-index: 500;
+    top: 0;
+    position: sticky;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+}
+
+.secondary-nav nav{
+    align-items: center;
+}
+
+.sticky-drop-down{
+    flex-grow: 1;
+    box-shadow: none;
+    overflow: initial;
+    display: flex;
+    background-color: #fefefe;
+    position: relative;
+}
+
+.sticky-drop-down a{
+    display: block;
+    width: 100%;
+    color: #0067b8;
+    text-decoration: none;
+
+}
+
+.sm-sticky-positioner{
+    padding: 0.75rem 0.75rem;
+    column-gap: 0.5rem;
+    display: flex;
+    /* align-items: center; */
+}
+
+.sticky-title{
+    flex-grow: 1;
+    flex-direction: column;
+    display: flex;
+    row-gap: 0.25rem;
+}
+
+.sticky-title div{
+    color: #004275;
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1rem;
+    margin-bottom: 0;
+    font-family: latest-bold;
+
+}
+
+.dropdown{
+    align-self: self-end;
+
+}
+
+.dropdown-container{
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    font-size: 1rem;
+    display: inline-flex;
+}
+
+.dropdown-container span{
+    transform: rotate(0);
+    color: #0078d4;
+}
+
+.dropdown-container span::before{
+    content: "";
+    font-family: m-fluent;
+    font-weight: 400;
+    line-height: 1;
+    color: #0078d4;
+}
+
+.sticky-ruler{
+    position: absolute;
+    bottom: 0;
+    height: 0.25rem;
+    width: 100%;
+    background-color: #0078d4;
+}
+
+.sticky-drop-down ul{
+    display: none;
+}
+
+.try-azure-sticky{
+    display: none;
+}
 /* -----------------------------Media Query---------------------------------- */
 @media screen and (max-width:540px){
     .banner-content-layout div{
@@ -354,6 +458,10 @@ video{
     .banner-content-layout div{
         margin-left: initial;
         margin-right: initial;
+    }
+
+    .sticky-drop-down{
+        margin: 0.25rem;
     }
 }
 @media screen and (max-width:859.98px){
@@ -438,8 +546,124 @@ video{
     .banner-buttons-container a{
         padding: 0.75rem 1rem;
     }
-    .try-azure{
 
+    .main-sticky-container{
+        height: 108px;
+    }
+    .sticky-drop-down a{
+        display: none;
+    }
+
+    .sticky-drop-down ul{
+        display: flex;
+        column-gap: 3rem;
+        overflow: hidden;
+        box-shadow: none;
+        background-color: #fefefe;
+        border: none;
+        text-align: left;
+        left: 0;
+        right: auto;
+        transform: unset;
+        flex-wrap: wrap;
+        padding: 0 !important;
+        position: relative;
+        border-radius: 0;
+        padding-bottom: 0.25rem !important;
+        margin-top: 0;
+
+    }
+
+    .sticky-drop-down ul li{
+        padding-left: 0.25rem;
+        margin-top: 1rem;
+        width: fit-content;
+        display: flex;
+
+    }
+
+    .sticky-drop-down ul li a{
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 0;
+        border-radius: 0;
+        align-items: start;
+        justify-content: space-between;
+        width: fit-content;
+        background-color: transparent;
+        text-decoration: none;
+        color: #0067b8;
+
+    }
+
+    .sticky-link-ruler{
+        width: 100%;
+        height: 0.25rem;
+        margin-bottom: -0.25rem;
+        border-radius: 0.25rem;
+        background-color: #0078d4;
+    }
+
+    .sticky-content{
+        width: 100%;
+        padding-bottom: 16px;
+
+
+    }
+
+    .sticky-nav{
+        padding-right: 3.5rem;
+        padding-left: 3.5rem;
+        display: flex;
+        flex-grow: 1;
+        flex-direction: column;
+        font-weight: 600;
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        color: #004275;
+        font-family: latest-bold;
+    }
+    .sticky-content div{
+        color: #004275;
+    }
+
+    .slr{
+        background: transparent;
+    }
+
+    .try-azure-sticky{
+        display: flex;
+        margin-bottom: 0.75rem;
+        margin-top: 0.75rem;
+        max-width: 125.9px;
+        height: 58px;
+        width: 100%;
+
+    }
+
+    .try-azure-sticky a{
+        transform: translateY(7px);
+        background-color: #89c402;
+        color: #000;
+        border-color: #89c402;
+        border: 2px solid #89c402;
+        padding: 0.25rem 0.75rem;
+        font-weight: 600;
+        font-size: .9375rem;
+        line-height: 1.375rem;
+        letter-spacing: -.02em;
+        border-radius: 0.5rem;
+        display: inline-block;
+        display: flex;
+        cursor: pointer;
+        /* height: 50px;
+        width: 100px; */
+    }
+
+    .try-azure-sticky a span{
+        padding-bottom: 0.125rem;
+        display: block;
+        text-align: center;
     }
 }
 
