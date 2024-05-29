@@ -25,6 +25,10 @@ body{
 }
 
 
+:root {
+    --layout-column-width: calc((100% - 1rem) / 2);
+  }
+  
 
 /* display-none */
 
@@ -169,12 +173,276 @@ header{
     font-family: latest-bold;
 }
 
+/* --------------------------Main------------------------------------ */
+.banner-container{
+    position: relative;
+}
+.banner-video-container{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: unset;
+    max-height: 100%;
+    overflow: hidden;
+    display: block;
+    z-index: -1;
+}
+
+video{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    display: block;
+}
 
 
+.banner-contents-container{
+    padding-right: 1rem;
+    padding-left: 1rem;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+
+}
+
+.banner-content-row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -.25rem;
+    margin-left: -.25rem;
+}
+
+.banner-content-col{
+    padding-right: .25rem;
+    padding-left: .25rem;
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+}
+
+.azure-sm-banner-title{
+    text-transform: uppercase;
+    margin: 0 0 0.75rem;
+}
+
+.azure-sm-banner-title div{
+    font-weight: 600;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    letter-spacing: 0.08em;
+    font-family: latest-bold;
+}
+
+.banner-main-title{
+    color: #0e1726;
+    margin: 0;
+    font-weight: 600;
+    font-size: 3rem;
+    line-height: 3.5rem;
+    letter-spacing: -0.05em;
+}
+
+.banner-main-title h1{
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 2.5rem;
+    letter-spacing: -0.05em;
+    margin-bottom: 0;
+    font-family: latest-bold;
+}
 
 
+.banner-contents{
+    color: #17253d;
+    margin: 0.75rem 0 0;
+    font-weight: 400;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    letter-spacing: -.03em;
+    font-family: latest-medium;
+
+}
+
+.banner-contents div br{
+    display: none;
+}
+
+.banner-buttons{
+    margin:  1.5rem 0 0;
+}
+
+.banner-buttons-container{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+
+.banner-buttons-container a{
+    border: 2px solid transparent;
+    padding: 0.75rem;
+    justify-content: center;
+    font-weight: 600;
+    font-size: .9375rem;
+    line-height: 1.375rem;
+    letter-spacing: -0.02em;
+    background-color: #0078d4;
+    color: white;
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 0.5rem;
+}
+
+.banner-buttons-container  a span{
+    padding-bottom: 0.125rem;
+    display: block;
+    text-align: center;
+    font-family: latest-bold;
+}
+
+.try-azure{
+    border: 2px solid #89c402 !important;
+    background-color: #89c402 !important;
+    color: #000 !important;
+}
+
+.banner-content-layout{
+    flex: 0 0 var(--layout-column-width)
+}
+
+
+.row-section-spacer{
+    margin-top: 4rem;
+    margin-inline-end: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -0.25rem;
+    margin-left: -0.25rem;
+}
+
+.row-section-spacer div{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: normal;
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+}
 
 /* -----------------------------Media Query---------------------------------- */
+@media screen and (max-width:540px){
+    .banner-content-layout div{
+        margin-left: initial;
+        margin-right: initial;
+    }
+
+    .banner-content-row{
+        margin-right: -.25rem;
+        margin-left: -.25rem;
+    }
+}
+
+
+
+
+@media screen and (max-width:859.98px){
+    .banner-content-layout div{
+        margin-left: initial;
+        margin-right: initial;
+    }
+}
+@media screen and (max-width:859.98px){
+    .banner-content-layout{
+        margin-top: 2rem;
+    }
+}
+
+
+@media screen and (min-width:540px){
+    .banner-contents-container{
+        padding-right: 4rem;
+        padding-left: 4rem;
+        
+    }
+    .banner-buttons-container{
+        flex-direction: row;
+    }
+
+  
+}
+
+@media screen and (min-width:860px){
+    
+    .banner-container{
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+        height: 628px;
+    }
+
+    .banner-contents-container{
+        max-width: 100vw;
+        padding-right: 3.5rem;
+        padding-left: 3.5rem;
+    }
+
+    .banner-content-row{
+        margin-right: -.5rem;
+        margin-left: -.5rem;
+    }
+
+    .banner-content-col{
+        padding-right: .5rem;
+        padding-left: .5rem;
+    }
+
+    .banner-main-layout{
+        align-items: center;
+        justify-content: initial;
+        display: flex;
+        flex-direction: row;
+        column-gap: 1rem;
+        row-gap: 0.5rem;
+        margin-top: 7px;
+
+    }
+
+    .azure-sm-banner-title{
+        margin: 0 0 1rem;
+    }
+    
+    .banner-main-title h1{
+        font-size: 2.5rem;
+        line-height: 3rem;
+        letter-spacing: -0.05em;
+        margin-bottom: 0;
+    }
+
+    .banner-contents{
+        margin: 1rem 0 0;
+        
+    }
+
+    .banner-contents div{
+        max-width: 656px;
+    }
+
+    .banner-buttons{
+        margin: 2rem 0 0;
+    }
+
+    .banner-buttons-container a{
+        padding: 0.75rem 1rem;
+    }
+    .try-azure{
+
+    }
+}
+
 
 
 @media screen and (min-width: 48em){
@@ -476,6 +744,9 @@ header{
         text-align: center;
         text-decoration: none;
         margin: 0 6px;
+        font-weight: 600;
+        line-height: 1;
+        font-family: latest-bold;
     }
 
     .azure-desktop-nav{
@@ -485,11 +756,71 @@ header{
 
 
 
+/* ------------------------------------1084px--------------------- */
+
+@media screen and (min-width:1084px){
+
+    .banner-contents-container{
+        width: 90%;
+        margin-right: auto;
+        margin-left: auto;
+        box-sizing: content-box;
+    }
+    
+}
+
 
 
 /* ------------------minwidth 1280px---------------------------- */
 
+@media screen and (min-width:1280px){
 
-.nav-search-form{
-    margin-right: 24px;
+    .nav-search-form{
+        margin-right: 24px;
+    }
+}
+
+@media screen and (min-width:1395px){
+    .banner-container div br{
+        display: block;
+    }
+
+}
+
+/*--------------------------------1440px-------------------------- */
+
+@media screen and (min-width:1440px){
+    .banner-contents-container{
+        max-width: 1328px;
+    }
+    .banner-main-layout{
+        margin-top: 52px;
+    }
+
+    .banner-content-row{
+        margin-right: -.5rem;
+        margin-left: -.5rem;
+    }
+
+    .banner-content-col{
+        padding-right: .5rem;
+        padding-left: .5rem;
+    }
+
+    .azure-sm-banner-title{
+        margin: 0 0 1rem;
+    }
+
+    .banner-main-title h1{
+        font-size: 3rem;
+        line-height: 3.5rem;
+        letter-spacing: -0.05em;
+    }
+
+    .banner-contents{
+        margin: 1rem 0 0;
+        font-size: 1.25rem;
+        line-height: 2rem;
+
+    }
 }
