@@ -379,7 +379,7 @@ video{
     display: flex;
     background-color: #fefefe;
     position: relative;
-    width: 100%;
+    /* width: 100%; */
 }
 
 .sticky-drop-down a{
@@ -813,6 +813,7 @@ picture{
     display: flex;
     flex-wrap: wrap;
     position: relative;
+   
 
 }
 
@@ -823,6 +824,9 @@ picture{
     margin-left: -.25rem;
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: normal;
 
 }
 
@@ -957,9 +961,293 @@ picture{
 .row{
     display: flex;
     flex-wrap: wrap;
-    margin-right: -.25rem;
-    margin-left: -.25rem;
+    
 }
+
+.row-solution-col{
+
+   flex-basis: 0;
+   flex-grow: 1;
+   max-width: 100%;
+   position: relative;
+   width: 100%;
+}
+
+.tab-panel-group{
+
+    position: relative;
+    margin: 1.5rem 0 0 0;
+
+}
+
+.accordion{
+    padding-left: 0;
+    margin-bottom: 0;
+
+}
+
+.accordion-vertical{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.multi-feature{
+    display: flex;
+    width: 100%;
+
+}
+
+.multi-feature ul{
+    overflow-y: auto;
+    overflow: hidden;
+    color: #17253d;
+    padding: 0;
+    flex-basis: 100%;
+    list-style: none;
+
+}
+
+.multi-feature ul li{
+    display: flex;
+    list-style: none;
+}
+
+.indicator{
+    display:block ;
+    opacity: 1;
+    transform: scaleY(1);
+    border-radius: 0.25rem;
+    width: 0.25rem;
+    height: auto;
+    background-color: #0078d4;
+}
+
+.accordion-item-content{
+    margin-left: 2rem;
+    width: 100%;
+    border-bottom: 0.0625rem solid #bdc5d2;
+}
+
+.accordion-title{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+}
+
+.accordion-title-btn{
+    padding-top: 0 !important;
+    text-align: left;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    width: 100%;
+    line-height: inherit;
+    gap: 0.5rem;
+    padding: 1.5rem 0 !important;
+    align-items: center;
+    border: none;
+    outline: none;
+    color: #0e1726;
+    background: 0 0;
+
+}
+
+.accordion-title-btn::before{
+    transform: rotate(-180deg);
+    line-height: 1.5625rem;
+    top: auto;
+    margin-top: auto;
+    font-family: m-fluent;
+    content: "";
+    font-size: 1em;
+}
+
+
+.accordion-title-btn h3{
+    font-weight: 600;
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+    letter-spacing: -.03rem;
+    margin-bottom: 0;
+    font-family: latest-bold;
+}
+
+
+.accordion-item-body{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.accent-subtle{
+    color:#002948;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    letter-spacing: -.03rem;
+    font-family: latest-medium;
+}
+
+.link-title a{
+    margin-bottom: 1.5rem;
+    text-underline-offset: 0.125rem;
+    color: #004275;
+    font-weight: 600;
+    font-size: .875rem;
+    line-height: 1.25rem;
+    text-decoration-line: underline;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.link-title a span{
+    padding-bottom: 0.125rem;
+    font-family: latest-bold;
+}
+
+.solution-media{
+    display:flex;
+    position: relative;
+    width: fit-content;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    height: auto;
+}
+
+.solution-media-img{
+    display: inherit;
+    width: inherit;
+    max-width: 100%;
+    height: auto;
+    border-radius: 1rem;
+}
+
+.solution-media-img img{
+    height: inherit;
+    max-width: inherit;
+    width: inherit;
+    /* object-fit: ; */
+    border-radius: 1rem !important;
+    /* aspect-ratio: 455/366; */
+    vertical-align: middle;
+
+}
+
+.media-pause{
+    position: absolute;
+    padding: 075rem;
+
+}
+
+.media-pause a{
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    width: fit-content;
+    border: 2px solid transparent;
+    padding: 0.875rem;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 0.9375rem;
+    line-height: 1.375rem;
+    letter-spacing: -.02rem;
+    background-color: #0078d4;
+    color: #fff;
+    border-radius: 0.5rem;
+    position: relative;
+    text-decoration: none;
+
+
+}
+
+.pause-icon{
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    font-size: 1rem;
+    display: inline-flex;
+
+}
+
+.pause-icon span{
+    display: flex;
+    align-items: center;
+    color: inherit;
+
+}
+
+.pause-icon span::before{
+    content: "";
+    font-family: m-fluent;
+    font-weight: 400;
+    line-height: 1;
+    font-size: 1rem;
+
+}
+
+
+.accordion-btn-container{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+}
+
+.accordion-btn-container button{
+    text-align: left;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    width: 100%;
+    line-height: inherit;
+    gap: 0.5rem;
+    padding: 1.5rem 0  !important;
+    align-items: center;
+    border: none;
+    outline: 0;
+    color: #0e1726;
+    background:  0 0 ;
+
+}
+
+.accordion-btn-container button::before{
+    font-family: m-fluent;
+    content: "";
+    font-size: 1em;
+    line-height: 1.5625rem;
+    margin-top: auto;
+}
+
+.accordion-btn-container button h3{
+    font-weight: 600;
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+    letter-spacing: -.03rem;
+    margin-bottom: 0;
+    font-family: latest-bold;
+}
+
+.bg-blue-btn a{
+    color: #004275;
+    font-weight: 600;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.sol-btn-text{
+    z-index: 1;
+}
+
 
 /* -----------------------------Media Query---------------------------------- */
 @media screen and (max-width:540px){
@@ -973,12 +1261,31 @@ picture{
         margin-left: -.25rem;
     }
 
-    .tab-panel-group{
+    /* .tab-panel-group{
         position: relative;
         margin: 0 0 0;
+    } */
+
+
+    .tab-items-container{
+        display: block;
+
+    }
+    
+
+
+}
+
+
+@media screen and (max-width:859.98px){
+    .indicator{
+        display: none;
+        opacity: 0;
     }
 
-    
+    .accordion-item-content{
+        margin-left: 0;
+    }
 }
 
 @media screen and (min-width:540px){
@@ -992,6 +1299,17 @@ picture{
         padding-left: 4rem;
         
     }
+
+    .row{
+        margin-right: -.25rem;
+        margin-left: -.25rem;
+    }
+
+    .row-solution-col{
+        padding-right: .25rem;
+        padding-left: .25rem;
+    }
+
 }
 
 
