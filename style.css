@@ -790,6 +790,7 @@ picture {
   flex-direction: column;
   gap: 1.5rem;
   align-items: normal;
+  padding-bottom: 3.5rem;
 }
 
 .pill-bar-tabs {
@@ -1562,6 +1563,180 @@ picture {
     position: absolute;
 }
 
+
+/* =================================GARTNER SECTION================================ */
+
+.gartner-section-master{
+  position: relative;
+  padding: 3rem 0;
+  background: #f4fafd !important;
+
+}
+
+.horizontal-card-row{
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -.25rem;
+  margin-left: -.25rem;
+}
+
+.hr-rounded{
+  position: relative;
+  min-width: 1px;
+  word-wrap: break-word;
+  height: 100%;
+  display: block;
+  box-shadow: 0 0 0.125rem rgba(0, 0, 0, 0.12) ,0 0.125rem 0.25rem rgba(0, 0, 0, 0.14);
+  background: #fefefe;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+.horizontal-col{
+  padding: 0 .25rem;
+  display: flex;
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 100%;
+  position: relative;
+  width: 100%;
+}
+
+.hr-row{
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -.25rem;
+  margin-left: -.25rem;
+  word-wrap: break-word;
+}
+
+.horizontal-card-img-container{
+   position: relative;
+   width: 100%;
+}
+
+.hr-img{
+  position: relative;
+  display: flex;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  border-radius: inherit;
+}
+
+.hr-img img{
+  width: inherit;
+  height: inherit;
+  max-width: inherit;
+  object-fit: cover;
+  border-radius: inherit;
+  aspect-ratio: initial;
+  vertical-align: middle;
+}
+
+.horizontal-card-contents-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 1rem;
+  padding-inline-end: 1rem;
+}
+
+.block-slim{
+  display: flex;
+  justify-content: flex-start;
+  gap: initial;
+  word-wrap: break-word;
+
+}
+
+.horizontal-card-contents{
+  display: flex;
+  align-items: flex-start;
+  text-align: left;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.hr-spacer-title{
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.hr-title-container{
+  padding-left: initial;
+
+  color: #0e1726;
+  position: relative;
+}
+
+.hr-title-container h3{
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  letter-spacing: -.05em;
+  margin-bottom: 0;
+  font-family: latest-bold;
+}
+
+
+.hr-contents{
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-items: flex-start;
+  text-align: left;
+
+}
+
+.hr-para-container{
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  letter-spacing: -.03em;
+  margin-bottom: 0;
+  color: #17253d;
+  font-family: latest-medium;
+}
+
+.hr-btn-container{
+  width: 100%;
+
+}
+
+.hr-btn{
+  display: inline-flex;
+  flex-direction: column;
+  gap: 0.75rem;
+
+}
+
+.hr-btn a{
+  border: 2px transparent;
+  padding: 0.75rem;
+  font-weight: 600;
+  font-size: .9375rem;
+  line-height: 1.375rem;
+  letter-spacing: -0.02em;
+  background-color: #0078d4;
+  color: #fff;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-family: latest-bold;
+}
+
+.hr-btn a span{
+  padding-bottom: 0.125rem;
+  display: block;
+  text-align: center;
+}
+
+
 /* -----------------------------Media Query---------------------------------- */
 @media screen and (max-width: 540px) {
   .banner-content-layout div {
@@ -1587,6 +1762,10 @@ picture {
     width: 100%;
     position: absolute;
   }
+  .hr-btn a{
+    flex-grow: 1;
+  }
+  
 }
 
 @media screen and (max-width: 859.98px) {
@@ -1597,6 +1776,12 @@ picture {
 
   .accordion-item-content {
     margin-left: 0;
+  }
+
+  .horizontal-card-img-container{
+  
+    padding-inline: 0.75rem;
+    padding-block: 0.75rem;
   }
 }
 
@@ -1665,6 +1850,10 @@ picture {
 
   .promo-card-grid{
     aspect-ratio: 21 / 9;
+  }
+
+  .gartner-section-master{
+    padding: 4.5rem 0;
   }
 }
 
@@ -2102,6 +2291,42 @@ picture {
 
   .row-section-master{
     gap: 3rem;
+  }
+
+  .gartner-row{
+    margin-top: 2rem;
+  }
+
+  .horizontal-card-img-container{
+    order: 1;
+    padding: 0;
+    padding-block: 0.5rem;
+    padding-inline-end: 1rem;
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .horizontal-card-contents-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 6rem;
+    padding-right: 3.5rem !important;
+    padding: 1.5rem;
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .horizontal-card-contents{
+    gap: 1rem;
+  }
+
+  .hr-title-container div h3{
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .hr-contents{
+    gap: 1rem;
   }
 }
 
@@ -2643,5 +2868,24 @@ picture {
 
   .row-section-master{
     gap: 3rem;
+  }
+
+
+  .hr-title-container div h3 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+
+  .hr-row{
+    max-width: 1320px;
+    max-height: 505px;
+  }
+
+  .hr-btn a{
+    padding: 0.75rem 1rem;
+  }
+
+  .hr-img img{
+    border-radius: 1rem;
   }
 }
