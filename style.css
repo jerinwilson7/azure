@@ -34,6 +34,10 @@ body {
     0 0.063rem 0.125rem var(--root-depth-color-2, rgba(0, 0, 0, 0.14));
   --arrow-background-gradient-start-position: 25%;
   --arrow-background-color: white;
+
+  --layout-card-width: calc( calc(100% - calc( 0.75rem * ( 1 - 1)) ) / 1 );
+  --layout-card-width3: calc( calc(100% - calc( 1rem * ( 3 - 1)) ) / 3 );
+  
 }
 
 /* display-none */
@@ -1208,6 +1212,39 @@ picture {
 
 /* ===============================PRODUCTS-SECTION================ */
 
+.section-master{
+    position: relative;
+    background: #f4fafd;
+}
+
+.product-services-bg-container{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: auto;
+    left: auto;
+    transform: unset;
+    max-height: 100%;
+    overflow: hidden;
+
+}
+
+.product-service-bg-img{
+    max-width: 100%;
+    display: block;
+
+}
+
+.product-service-bg-img img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    max-width: inherit;
+    border-radius: inherit;
+    aspect-ratio: initial;
+    vertical-align: middle;
+}
+
 .card-grid {
   display: flex;
   flex-wrap: wrap;
@@ -1218,6 +1255,7 @@ picture {
 
 .promo-card-grid {
   padding-right: 0.25rem;
+  padding-left: 0.25rem;
   flex-basis: 0;
   flex-grow: 1;
   max-width: 100%;
@@ -1283,6 +1321,7 @@ picture {
   padding: 1rem;
   position: inherit;
   bottom: 0;
+  position: absolute;
 }
 
 .promo-card-content-block {
@@ -1378,8 +1417,9 @@ picture {
   height: 100%;
 }
 
-.cards-layout-col {
-  flex-direction: 0 0 var(--layout-grid-width);
+.card-layout-col {
+    display: flex;
+  flex: 0 0 var(--layout-card-width);
 }
 
 .card {
@@ -1477,10 +1517,49 @@ picture {
 }
 
 .card-content-title h4 {
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   font-weight: 600;
   line-height: 1.75rem;
   letter-spacing: -0.05em;
+}
+
+.card-para{
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    letter-spacing: -0.03em;
+    margin-bottom: 0;
+    color: #17253d;
+    font-family: latest-medium;
+}
+
+.card-link{
+    display: flex;
+    justify-content: flex-start;
+    gap: initial;
+    margin-top: 2rem;
+    word-wrap: break-word;
+}
+
+.card-link a{
+    text-decoration: underline;
+    text-underline-offset: 0.125rem;
+    color: #004275;
+    font-weight: 600;
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: latest-bold;
+}
+
+.card-link a span{
+    padding-bottom: 0.125rem;
+}
+
+.prod-sol-container{
+    position: absolute;
 }
 
 /* -----------------------------Media Query---------------------------------- */
@@ -1547,6 +1626,11 @@ picture {
     padding-left: 0.25rem;
   }
 
+  .section-master{
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+
   .container {
     padding-right: 4rem;
     padding-left: 4rem;
@@ -1576,6 +1660,11 @@ picture {
   }
   .banner-buttons-container {
     flex-direction: row;
+  }
+
+
+  .promo-card-grid{
+    aspect-ratio: 21 / 9;
   }
 }
 
@@ -1924,6 +2013,95 @@ picture {
 
   .accordion-title-btn {
     padding-top: 0 !important;
+  }
+
+  .product-services-bg-container{
+    display: block;
+
+  }
+
+  .card-grid{
+    row-gap: 1rem;
+    margin-right: -.5rem;
+    margin-left: -.5rem;
+  }
+
+  .promo-card-grid{
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  .overlay-img img{
+    aspect-ratio: 19/9;
+  }
+
+  .promo-card-content{
+    padding: 1.5rem;
+
+  }
+
+  .promo-card-content-block{
+    gap: 1rem;
+  }
+
+  .promo-title-text h4{
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    letter-spacing: -.05em;
+  }
+
+  .promo-card-content{
+    gap: 1rem;
+  }
+
+  .card-grid-cards{
+    padding: 0 0.5rem;
+
+  }
+
+  .cards-layout{
+    row-gap: 1rem;
+    height: 100%;
+    column-gap: 1rem;
+
+  }
+
+  .card-layout-col{
+    flex: 0 0 var(--layout-card-width3);
+  }
+
+  .card{
+    border-radius: 1.5rem;
+  }
+
+  .card-contents{
+    padding: 1.5rem;
+  }
+
+  .card-content-block{
+    gap: 1rem;
+  }
+
+  .card-main-content-section{
+    gap: 1rem;
+  }
+
+  .card-content-title h4{
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+
+  }
+
+  .card-link{
+    margin-top: 3rem;
+
+  }
+
+  .row-section-master{
+    gap: 3rem;
   }
 }
 
@@ -2396,5 +2574,74 @@ picture {
     font-size: 1.25rem;
     line-height: 1.75rem;
     letter-spacing: -0.03em;
+  }
+
+  .promo-card-grid{
+    flex: 0 0 25%;
+    max-width: 25%;
+    padding: 0 0.5rem;
+  }
+
+  .overlay-img img{
+    border-radius: 1.5rem;
+  }
+
+  .promo-card-content{
+    padding: 1.5rem;
+  }
+
+  .promo-card-content-block{
+    gap: 1rem;
+  }
+
+  .promo-title-text h4{
+    font-size: 2rem;
+    line-height: 2.5rem;
+    
+  }
+  .promo-card-btn a{
+    padding: 0.75rem 1rem;
+  }
+
+  .card-grid-cards{
+    flex: 0 0 75%;
+    max-width: 75%;
+    padding: 0 -.5rem;
+  }
+
+  /* .card-content-title h4{
+    font-size: 1.5rem;
+    line-height: 2rem;
+    letter-spacing: -0.05em;
+
+  } */
+
+  .row-section-master{
+    margin-top: 3rem;
+  }
+
+  .sol-tab-panel{
+    margin-top: 3rem;
+  }
+
+  .overlay-img img{
+    aspect-ratio: 317 / 564;
+  }
+
+  .promo-title-text h3{
+    font-size: 2rem;
+    line-height: 2.5rem;
+    letter-spacing: -.05em;
+
+  }
+
+  .card-content-title h4{
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    letter-spacing: -0.03em;
+  }
+
+  .row-section-master{
+    gap: 3rem;
   }
 }
