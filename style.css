@@ -1943,7 +1943,8 @@ picture {
 .resource-tab-panel-group{
   padding-top: 1.5rem;
   padding-bottom: 3rem;
-  margin: unset 0 0 0;
+  margin-top: unset;
+  margin: 0 0 0;
   width: 100% !important;
 
 
@@ -1997,7 +1998,7 @@ picture {
 
 .resource-img-container{
   padding: 1rem;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   width: 100%;
   backdrop-filter: blur(1.25rem);
   position: relative;
@@ -2145,6 +2146,11 @@ picture {
 
   .gartner-section-master{
     padding: 4.5rem 0;
+  }
+
+  .resource-tab-main{
+    padding-left: 4rem;
+    padding-right: 4rem;
   }
 }
 
@@ -2619,6 +2625,67 @@ picture {
   .hr-contents{
     gap: 1rem;
   }
+
+  .resource-row{
+    margin-bottom: 3.25rem;
+    margin-right: -0.5rem;
+    margin-left: -0.5rem;
+  }
+
+  .resource-block-heading{
+    padding-top: 4.5rem;
+    margin-bottom: 2rem;
+    margin-inline: auto;
+    width: calc(83.33333%);
+
+  }
+
+  .resource-block-title h2{
+    font-size: 1.875rem;
+  }
+
+  .resource-tab-main{
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
+  
+  }
+
+  .tab-item-1{
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+  }
+
+  .tab-item{
+    
+    padding: 1rem 1.5rem 1.5rem 1.5rem;
+  }
+
+  .resource-tab-indicator{
+    border-bottom-left-radius: 1rem;
+  }
+
+  .resource-tab-panel-group{
+    padding-top: 2rem;
+    padding-bottom: 4.5rem;
+  }
+
+  .resource-title-container{
+    margin-inline: auto;
+    width: calc(83.33333%);
+    gap: 1rem;
+  }
+
+  .resource-title{
+    gap: 1rem;
+  }
+
+  .resource-img-container{
+    padding: 1.5rem;
+    margin-top: 2rem;
+    width: 66.6667%;
+    margin: auto;
+  }
+
 }
 
 @media screen and (min-width: 48em) {
@@ -3178,5 +3245,47 @@ picture {
 
   .hr-img img{
     border-radius: 1rem;
+  }
+
+  .resource-block-heading{
+    width: calc(14 / 24 * 100%);
+  }
+
+  .resource-block-title h2{
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+
+  .resource-tab-main{
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+    box-sizing: content-box;
+  }
+
+  .tab-student{
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+  }
+
+  .link-student{
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+  }
+
+  .resource-title-container{
+    width: calc(14 / 24 * 100%);
+  }
+
+  .resource-content-block-title h3{
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+
+  .resource-img-container{
+    padding: 1.5rem;
+    margin-top: 2rem !important;
+    width: 66.667%;
+    margin: auto;
   }
 }
